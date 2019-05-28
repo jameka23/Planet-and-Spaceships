@@ -25,6 +25,7 @@ namespace lists
             lastTwoPlanetsList.Add("Pluto");
             
             // checking to make sure that I have the right planets
+            Console.WriteLine("------- Last Two Planets -------");
             foreach(string planet in lastTwoPlanetsList){
                 Console.WriteLine(planet);
             }
@@ -38,13 +39,17 @@ namespace lists
             planets.Insert(1, "Venus");
 
             // 5. Use Add() again to add Pluto to the end of the list.
-            planets.Add("Pluto");
+            // planets.Add("Pluto"); Already added!!!
 
+            Console.WriteLine("------- All The Planets -------");
+            foreach(string planet in planets){
+                Console.WriteLine(planet);
+            }
             // 6. Now that all the planets are in the list, slice the list using GetRange() in order to extract the rocky planets into a new list called rockyPlanets. The rocky planets will remain in the original planets list.
             List<string> rockyPlanets = new List<string>(planets.GetRange(1,4));
 
             // 7. Being good amateur astronomers, we know that Pluto is now a dwarf planet, so use the Remove() method to eliminate it from the end of planetList.
-            rockyPlanets.Remove("Pluto");
+            planetList.Remove("Pluto");
         }
     }
 }
